@@ -3,7 +3,7 @@
   "version": "4.0.1-alpha",
   "description": "📖 Solidity libraries that are shared across Uniswap contracts",
   "files": [
-    "contracts",
+    "src",
     "!contracts/test"
   ],
   "homepage": "https://uniswap.org",

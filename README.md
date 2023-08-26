@@ -1,28 +1,66 @@
-# uniswap-lib
+## Foundry
 
-[![Tests](https://github.com/Uniswap/uniswap-lib/workflows/Tests/badge.svg)](https://github.com/Uniswap/uniswap-lib/actions?query=workflow%3ATests)
-[![Static Analysis](https://github.com/Uniswap/uniswap-lib/workflows/Static%20Analysis/badge.svg)](https://github.com/Uniswap/uniswap-lib/actions?query=workflow%3A%22Static+Analysis%22)
-[![Lint](https://github.com/Uniswap/uniswap-lib/workflows/Lint/badge.svg)](https://github.com/Uniswap/uniswap-lib/actions?query=workflow%3ALint)
-[![Fuzz Testing](https://github.com/Uniswap/uniswap-lib/workflows/Fuzz%20Testing/badge.svg)](https://github.com/Uniswap/uniswap-lib/actions?query=workflow%3A%22Fuzz+Testing%22)
-[![npm](https://img.shields.io/npm/v/@uniswap/lib)](https://unpkg.com/@uniswap/lib@latest/)
+**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
 
-Solidity libraries that are shared across Uniswap contracts. This package focuses on safety and execution gas efficiency.
+Foundry consists of:
 
-## Install
+-   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
+-   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
+-   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
+-   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
 
-Run `yarn` to install dependencies.
+## Documentation
 
-## Test
-
-Run `yarn test` to execute the test suite.
+https://book.getfoundry.sh/
 
 ## Usage
 
-Install this in another project via `yarn add @uniswap/lib`
+### Build
 
-Then import the contracts via:
+```shell
+$ forge build
+```
 
-```solidity
-import '@uniswap/lib/contracts/libraries/Babylonian.sol';
+### Test
 
+```shell
+$ forge test
+```
+
+### Format
+
+```shell
+$ forge fmt
+```
+
+### Gas Snapshots
+
+```shell
+$ forge snapshot
+```
+
+### Anvil
+
+```shell
+$ anvil
+```
+
+### Deploy
+
+```shell
+$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
+```
+
+### Cast
+
+```shell
+$ cast <subcommand>
+```
+
+### Help
+
+```shell
+$ forge --help
+$ anvil --help
+$ cast --help
 ```
